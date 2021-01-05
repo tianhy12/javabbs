@@ -1,7 +1,6 @@
 package com.example.javabbs.domain;
 
 public class Login {
-    private Integer lId;
     private User user;
     private String uUserName;
     private String lPassword;
@@ -9,29 +8,10 @@ public class Login {
     public Login() {
     }
 
-    public Login(Integer lId, User user, String uUserName, String lPassword) {
-        this.lId = lId;
+    public Login(User user, String uUserName, String lPassword) {
         this.user = user;
         this.uUserName = uUserName;
         this.lPassword = lPassword;
-    }
-
-    @Override
-    public String toString() {
-        return "Login{" +
-                "lId=" + lId +
-                ", user=" + user +
-                ", uUserName='" + uUserName + '\'' +
-                ", lPassword='" + lPassword + '\'' +
-                '}';
-    }
-
-    public Integer getlId() {
-        return lId;
-    }
-
-    public void setlId(Integer lId) {
-        this.lId = lId;
     }
 
     public User getUser() {

@@ -1,5 +1,5 @@
 package com.example.javabbs.dao;
 
-public class UserDao {
-
+public interface UserDao {
+    int siginUser();
 }

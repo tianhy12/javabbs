@@ -6,47 +6,26 @@ public class User {
     private Integer uId;
     private String uName;
     private Sex sex;
-    private String uEmail;
-    private String uOccupation;
-    private String uAddress;
     private Jurisdiction jurisdiction;
-    private Integer uPostCount;
-    private Integer uCommentCount;
+    private Integer  uPostCount;
+    private Integer  uCommentCount;
     private Timestamp uRegisterTime;
     private String uIntroduceBirefly;
 
     public User() {
+
     }
 
-    public User(Integer uId, String uName, Sex sex, String uEmail, String uOccupation, String uAddress, Jurisdiction jurisdiction, Integer uPostCount, Integer uCommentCount, Timestamp uRegisterTime, String uIntroduceBirefly) {
+
+    public User(Integer uId, String uName, Sex sex, Jurisdiction jurisdiction, Integer uPostCount, Integer uCommentCount, Timestamp uRegisterTime, String uIntroduceBirefly) {
         this.uId = uId;
         this.uName = uName;
         this.sex = sex;
-        this.uEmail = uEmail;
-        this.uOccupation = uOccupation;
-        this.uAddress = uAddress;
         this.jurisdiction = jurisdiction;
         this.uPostCount = uPostCount;
         this.uCommentCount = uCommentCount;
         this.uRegisterTime = uRegisterTime;
         this.uIntroduceBirefly = uIntroduceBirefly;
-    }
-
-    @Override
-    public String toString() {
-        return "User{" +
-                "uId=" + uId +
-                ", uName='" + uName + '\'' +
-                ", sex=" + sex +
-                ", uEmail='" + uEmail + '\'' +
-                ", uOccupation='" + uOccupation + '\'' +
-                ", uAddress='" + uAddress + '\'' +
-                ", jurisdiction=" + jurisdiction +
-                ", uPostCount=" + uPostCount +
-                ", uCommentCount=" + uCommentCount +
-                ", uRegisterTime=" + uRegisterTime +
-                ", uIntroduceBirefly='" + uIntroduceBirefly + '\'' +
-                '}';
     }
 
     public Integer getuId() {
@@ -71,30 +50,6 @@ public class User {
 
     public void setSex(Sex sex) {
         this.sex = sex;
-    }
-
-    public String getuEmail() {
-        return uEmail;
-    }
-
-    public void setuEmail(String uEmail) {
-        this.uEmail = uEmail;
-    }
-
-    public String getuOccupation() {
-        return uOccupation;
-    }
-
-    public void setuOccupation(String uOccupation) {
-        this.uOccupation = uOccupation;
-    }
-
-    public String getuAddress() {
-        return uAddress;
-    }
-
-    public void setuAddress(String uAddress) {
-        this.uAddress = uAddress;
     }
 
     public Jurisdiction getJurisdiction() {
@@ -135,5 +90,19 @@ public class User {
 
     public void setuIntroduceBirefly(String uIntroduceBirefly) {
         this.uIntroduceBirefly = uIntroduceBirefly;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "uId=" + uId +
+                ", uName='" + uName + '\'' +
+                ", sex=" + sex +
+                ", jurisdiction=" + jurisdiction +
+                ", uPostCount=" + uPostCount +
+                ", uCommentCount=" + uCommentCount +
+                ", uRegisterTime=" + uRegisterTime +
+                ", uIntroduceBirefly='" + uIntroduceBirefly + '\'' +
+                '}';
     }
 }
